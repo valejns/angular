@@ -1,0 +1,24 @@
+<h1>Guardianes</h1>
+
+<div *ngIf="guardianBorrado; else noBorrado">
+    <h3>
+        Guardian borrado:
+        <small>
+            {{guardianBorrado}}
+        </small>
+    </h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>
+        No se borró nada
+    </h3>
+</ng-template>
+
+<button (click)="borrarGuardian()">borrar guardian</button>
+
+<ul>
+    <li *ngFor="let guardian of guardianes">
+        {{ guardian }}
+    </li>
+</ul>
